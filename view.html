@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>게시글 보기</title>
+</head>
+<body>
+
+<h1 id="title"></h1>
+<hr>
+<p id="content"></p>
+
+<br>
+
+<a href="index.html">목록으로</a>
+
+<script>
+
+const params = new URLSearchParams(location.search);
+
+const id = params.get("id");
+
+const posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+document.getElementById("title").innerText =
+posts[id].title;
+
+document.getElementById("content").innerText =
+posts[id].content;
+
+</script>
+
+</body>
+</html>

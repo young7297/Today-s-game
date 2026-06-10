@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게임 커뮤니티</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'맑은 고딕',sans-serif;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url("./image/home.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;  
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+}
+
+h1{
+    color:white;
+    text-align:center;
+    margin:20px 0;
+    font-size:48px;
+    text-shadow:0 0 10px #00aaff;
+}
+
+.info-box p{
+    margin:10px 0;
+}
+
+ul.menu {
+  list-style: none;
+  display: flex;
+  background-color: #f3f3f3;
+}
+
+ul li a {
+  display: block;
+  color: #666666;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #a89cff;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+.container{
+    width:95%;
+    margin:20px auto;
+}
+
+/* 메인 레이아웃 */
+.main{
+    display:grid;
+    grid-template-columns:180px 1fr 250px;
+    gap:10px;
+}
+
+/* 공통 박스 */
+.box{
+    border:2px solid #555;
+    background:rgba(0,0,0,0.65);
+    padding:15px;
+}
+
+/* 왼쪽 */
+.left{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.login-box{
+    height:220px;
+}
+
+.login-box button{
+    width:100%;
+    margin-top:10px;
+    padding:8px;
+}
+
+.info-box{
+    height:150px;
+}
+
+/* 가운데 */
+.center{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.link-area{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.link-box{
+    height:150px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.post-box{
+    height:400px;
+}
+
+.post-box ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+
+/* 오른쪽 */
+.right{
+    display:flex;
+    flex-direction:column;
+}
+
+.rank-box{
+    height:620px;
+}
+
+.rank-box ol{
+    margin-top:15px;
+    padding-left:25px;
+}
+
+.box:hover{
+    border-color:#00aaff;
+    transition:0.3s;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin:20px;
+}
+
+.search-box input{
+    width:500px;
+    padding:12px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:5px 0 0 5px;
+}
+
+.search-box button{
+    padding:12px 20px;
+    border:none;
+    background:#04AA6D;
+    color:white;
+    cursor:pointer;
+    border-radius:0 5px 5px 0;
+}
+
+.search-box button:hover{
+    background:#038d5a;
+}
+
+.post-item{
+    background:rgba(255,255,255,0.08);
+    border:1px solid #555;
+    padding:12px;
+    margin:10px 0;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+}
+
+.post-item:hover{
+    background:#00aaff;
+    transition:0.3s;
+}
+
+.video-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.video-box h3{
+    margin:0;
+}
+
+.video-box iframe{
+    border-radius:10px;
+}
+
+.game-list a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:8px;
+}
+
+.game-list a:hover{
+    background:#00aaff;
+    border-radius:5px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1>게임스토리</h1>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="html/price.html">가격</a></li>
+  <li><a href="html/genre.html">장르</a></li>
+  <li><a href="html/company.html">게임사</a></li>
+</ul>
+
+<div class="search-box">
+    <input type="text" placeholder="🔍 게임명, 장르, 게임사 검색">
+    <button>검색</button>
+</div>
+
+<!-- 메인 -->
+<div class="main">
+
+    <!-- 왼쪽 -->
+    <aside class="left">
+
+        <div class="box login-box">
+            <h3>회원 메뉴</h3>
+            <button>로그인</button>
+            <button>회원가입</button>
+            <button>내 정보</button>
+        </div>
+
+        <div class="box info-box">
+            <h3>고객센터</h3>
+            <p>문의하기</p>
+            <p>사이트 소개</p>
+        </div>
+
+    </aside>
+
+    <!-- 가운데 -->
+    <section class="center">
+
+        <div class="link-area">
+
+            <div class="box link-box">
+                <a href="https://playvalorant.com/ko-kr/" target="_blank">
+                    발로란트 공식 사이트
+                </a>
+            </div>
+
+            <div class="box video-box">
+
+                <h3>인기 플레이 영상</h3>
+
+            <iframe
+            width="500"
+            height="250"
+            src="https://www.youtube.com/embed/9njqJmBFWN8"
+            allowfullscreen>
+            </iframe>
+
+    </div>
+
+
+        </div>
+
+        <div class="box post-box">
+            <h2>최신 게시글</h2>
+            
+            <button onclick="location.href='write.html'">
+                글쓰기
+            </button>
+
+            <div id="postList"></div>
+
+        </div>
+
+    </section>
+
+    <!-- 오른쪽 -->
+    <aside class="right">
+
+        <div class="box rank-box">
+            <h2>인기 게임 TOP 10</h2>
+
+            <ol class="game-list">
+                <li><a href="boards/lol.html">리그 오브 레전드</a></li>
+                <li><a href="boards/fconline.html">FC 온라인</a></li>
+                <li><a href="boards/valorant.html">발로란트</a></li>
+                <li><a href="boards/pubg.html">배틀그라운드</a></li>
+                <li><a href="boards/maple.html">메이플스토리</a></li>
+                <li><a href="boards/lostark.html">로스트아크</a></li>
+                <li><a href="boards/overwatch.html">오버워치2</a></li>
+                <li><a href="boards/eldenring.html">엘든링</a></li>
+                <li><a href="boards/monsterhunter.html">몬스터헌터</a></li>
+                <li><a href="boards/gta5.html">GTA5</a></li>
+            </ol>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<script>
+
+let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+let postList = document.getElementById("postList");
+
+if(posts.length === 0){
+
+    postList.innerHTML = `
+        <div class="post-item">
+            등록된 게시글이 없습니다.
+        </div>
+    `;
+
+}
+else{
+posts.forEach((post,index) => {
+
+    postList.innerHTML += `
+        <div class="post-item"
+             onclick="location.href='view.html?id=${index}'">
+
+            ${post.title}
+
+        </div>
+    `;
+
+});
+}
+</script>
+</body>
+</html>
